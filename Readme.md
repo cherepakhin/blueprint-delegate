@@ -12,7 +12,7 @@ public class ApplicationVasi extends OSGiProcessApplication {
 
 ````
 
-Пользовательский процесс camunda в [](src/main/resources/diagram_1.bpmn) должен попасть в бандл
+Пользовательский процесс camunda [diagram_1.bpmn](src/main/resources/diagram_1.bpmn) должен попасть в бандл
 
 Типичный BeanBluePrint. Из camunda доступен через 
 
