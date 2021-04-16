@@ -53,3 +53,6 @@ camunda:expression="${beanBluePrint.myMethod(execution)}"
 ![Схема](./doc/task.png)
 
 >Вызов blueprint сервиса ${delegateService.callOnExecution(execution)} не прокатил :(
+
+#### Ссылки
+- https://github.com/camunda/camunda-bpm-platform-osgi/tree/master/camunda-bpm-osgi-processapplication

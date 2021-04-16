@@ -13,7 +13,7 @@
     <bpmn:endEvent id="Event_0dvfkax">
       <bpmn:incoming>strelka_1</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:serviceTask id="Irina" camunda:expression="${delegateService.callOnExecution(execution)}">
+    <bpmn:serviceTask id="Irina" camunda:expression="${beanBluePrint.myMethod(execution)}">
       <bpmn:extensionElements>
         <camunda:inputOutput>
           <camunda:inputParameter name="bdotype">salesX</camunda:inputParameter>
