@@ -1,5 +1,12 @@
 ### Связывание Camunda, Karaf, Blueprint
 
+Сборка
+````
+mvn clean install
+````
+
+В результате соберется бандл для Karaf в ./bundles/delegate.jar
+
 Приложение в Karaf [ApplicationVasi.java](src/main/java/ru/perm/v/camunda/ApplicationVasi.java)
 
 Объявляется с помощью [processes.xml](src/main/resources/META-INF/processes.xml). Путь важен. Иначе нужно определить deploymentDescriptors
