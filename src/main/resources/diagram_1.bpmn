@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1ts6moy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.6.0">
+  <bpmn:process id="Test_process" isExecutable="true">
+    <bpmn:extensionElements>
+      <camunda:properties>
+        <camunda:property />
+      </camunda:properties>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1pfagdf</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1pfagdf" sourceRef="StartEvent_1" targetRef="Irina" />
+    <bpmn:endEvent id="Event_0dvfkax">
+      <bpmn:incoming>strelka_1</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="Irina" camunda:expression="${delegateService.callOnExecution(execution)}">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="bdotype">salesX</camunda:inputParameter>
+          <camunda:inputParameter name="bdokey">9b2dc54e-6527-11eb-b5c6-0a580af40251</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1pfagdf</bpmn:incoming>
+      <bpmn:outgoing>strelka_1</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="strelka_1" sourceRef="Irina" targetRef="Event_0dvfkax" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Test_process">
+      <bpmndi:BPMNEdge id="Flow_1egkwu9_di" bpmnElement="strelka_1">
+        <di:waypoint x="460" y="130" />
+        <di:waypoint x="592" y="130" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="463" y="197" width="34" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pfagdf_di" bpmnElement="Flow_1pfagdf">
+        <di:waypoint x="215" y="120" />
+        <di:waypoint x="288" y="120" />
+        <di:waypoint x="288" y="130" />
+        <di:waypoint x="360" y="130" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0dvfkax_di" bpmnElement="Event_0dvfkax">
+        <dc:Bounds x="592" y="112" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0r9gtih_di" bpmnElement="Irina">
+        <dc:Bounds x="360" y="90" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
