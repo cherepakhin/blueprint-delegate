@@ -123,13 +123,10 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-<!--                        <Fragment-Host>org.camunda.bpm</Fragment-Host>-->
+<!--  Все умрет. Не будет работать
+                      <Fragment-Host>org.camunda.bpm</Fragment-Host>-->
                         <Import-Package>*</Import-Package>
-<!--                        <Bundle-Blueprint>OSGI-INF/blueprint/blueprint.xml</Bundle-Blueprint>-->
-<!--                        <Fragment-Host>org.camunda.bpm</Fragment-Host>-->
                         <Export-Package>ru.perm.v.camunda</Export-Package>
-
-<!--                        <Include-Resource>${basedir}/src/main/resources/</Include-Resource>-->
                         <Implementation-Version>${project.version}</Implementation-Version>
                     </instructions>
                 </configuration>
