@@ -14,7 +14,30 @@ public class ApplicationVasi extends OSGiProcessApplication {
 
 Пользовательский процесс camunda [diagram_1.bpmn](src/main/resources/diagram_1.bpmn) должен попасть в бандл
 
-Типичный BeanBluePrint. Из camunda доступен через 
+Типичный BeanBluePrint. 
+
+````java
+@Slf4j
+public class BeanBluePrint {
+
+    private final String id;
+
+    public BeanBluePrint(String id) {
+        this.id = id;
+    }
+    public void myMethod(DelegateExecution delegateExecution) {
+        log.info("===================myMethod");
+    }
+````
+
+Определение в [blueprint.xml](src/main/resources/OSGI-INF/blueprint/blueprint.xml)
+
+````xml
+    <bean id="beanBluePrint" class="ru.perm.v.camunda.BeanBluePrint">
+        <argument value="Message from BeanBluePrint"/>
+    </bean>
+````
+Из camunda доступен через 
 
 ````
 camunda:expression="${beanBluePrint.myMethod(execution)}"
